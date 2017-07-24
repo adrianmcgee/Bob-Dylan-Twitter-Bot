@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title   
+    
+    h3 Tweets containing '#liveperson'
+
+  table
+    thead
+      tr
+        th Tweet
+        th Screen Name
+        th Date
+    tbody
+      - each item in rows
+        tr
+          td= item.tweet
+          td= item.screen_name
+          td= item.created_date
